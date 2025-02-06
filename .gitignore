@@ -1,5 +1,5 @@
 # Ignorar arquivos de banco de dados
-./postgres-data
+postgres-data/
 
 # Ignorar arquivos de ambiente local
 .env
