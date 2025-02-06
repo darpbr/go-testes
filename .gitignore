@@ -1,1 +1,30 @@
+# Ignorar arquivos de banco de dados
 ./postgres-data
+
+# Ignorar arquivos de ambiente local
+.env
+*.local
+*.env
+*.env.local
+*.env.*.local
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar diretórios de dependências
+node_modules/
+vendor/
+
+# Ignorar arquivos de compilação
+dist/
+build/
+
+# Ignorar arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos de IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
