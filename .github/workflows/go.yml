@@ -38,3 +38,6 @@ jobs:
 
     - name: Build
       run: go build -v main.go
+
+    - name: Teste secrets
+      run: echo ${{ secrets.TESTE }}
