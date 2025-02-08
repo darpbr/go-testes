@@ -18,3 +18,14 @@ jobs:
       with:
         username: ${{ secrets.USER_DOCKER }}
         password: ${{ secrets.PASSWORD_DOCKER }}
+
+    - name: Build and push Docker images
+      uses: docker/build-push-action@v6.13.0
+      with:
+        context: .
+        # Path to the Dockerfile
+        file: ./Dockerfile
+        # Push is a shorthand for --output=type=registry
+        push: true
+        # List of tags
+        tags: darpbr/go-testes:${{ github.ref_name }}
