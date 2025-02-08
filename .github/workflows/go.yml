@@ -5,14 +5,20 @@ name: Go
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ '*' ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ '*' ]
 
 jobs:
 
   test:
     runs-on: ubuntu-latest
+    env:
+      HOST: localhost
+      PORT: 5432
+      USER: root
+      PASS: root
+      DBNAME: root
     steps:
     - uses: actions/checkout@v4
 
